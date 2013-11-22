@@ -1,4 +1,5 @@
 .directory
+components/*
 
 # Bootstrap
 app/bootstrap*
