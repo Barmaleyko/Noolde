@@ -1,0 +1,4 @@
+RoSky_noodle:
+    resource: "@RoSkyNoodleBundle/Resources/config/routing.yml"
+    prefix:   /
+
