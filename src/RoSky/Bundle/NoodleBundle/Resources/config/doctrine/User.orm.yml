@@ -1,6 +1,6 @@
 RoSky\Bundle\NoodleBundle\Entity\User:
     type: entity
-    table: null
+    table: fos_user
     fields:
         id:
             type: integer
