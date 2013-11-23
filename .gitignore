@@ -1,5 +1,6 @@
 .directory
 components/*
+composer.phar
 
 # Bootstrap
 app/bootstrap*
