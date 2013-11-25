@@ -3,14 +3,16 @@
 namespace RoSky\Bundle\NoodleBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Model\User as BaseUser;
 
-class User extends BaseUser
+/**
+ * GamesList
+ */
+class GamesList
 {
     /**
      * @var integer
      */
-    protected $id;
+    private $id;
 
 
     /**

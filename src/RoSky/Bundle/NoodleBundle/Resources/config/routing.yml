@@ -1,3 +1,7 @@
 noodle_mainPage:
     pattern:  /
     defaults: { _controller: RoSkyNoodleBundle:Main:index }
+
+noodle_gamesPage:
+    pattern:  /games
+    defaults: { _controller: RoSkyNoodleBundle:Games:showGamesList }

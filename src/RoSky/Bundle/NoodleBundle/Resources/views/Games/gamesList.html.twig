@@ -1,0 +1,13 @@
+{% extends 'RoSkyNoodleBundle::layout.html.twig' %}
+
+{% block title %}
+    Список игр{{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <script src="http://localhost:55550/socket.io/socket.io.js"></script>
+    <script src="{{ asset('bundles/roskynoodle/js/gamesListClient.js') }}"></script>
+    <div id="gamesList">
+        Ожидание соединения с сервером...
+    </div>
+{% endblock %}
