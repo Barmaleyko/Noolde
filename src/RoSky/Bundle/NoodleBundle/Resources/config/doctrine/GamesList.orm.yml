@@ -7,8 +7,15 @@ RoSky\Bundle\NoodleBundle\Entity\GamesList:
             id: true
             generator:
                 strategy: AUTO
-        name:
+        pname:
             type: string
-        players:
+            length: 50
+        pcount:
             type: integer
+        gname:
+            type: string
+            length: 100
+        gstatus:
+            type: string
+            length: 50
     lifecycleCallbacks: {  }

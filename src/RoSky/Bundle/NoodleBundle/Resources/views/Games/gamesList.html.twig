@@ -4,10 +4,38 @@
     Список игр{{ parent() }}
 {% endblock %}
 
+{% block css_styles %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/roskynoodle/css/gamesListTable.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/roskynoodle/css/niceButton.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-    <script src="http://localhost:55550/socket.io/socket.io.js"></script>
-    <script src="{{ asset('bundles/roskynoodle/js/gamesListClient.js') }}"></script>
-    <div id="gamesList">
-        Ожидание соединения с сервером...
-    </div>
+    {% if games %}
+        <div id="gamesList">
+            <table id="customers">
+                <tr>
+                    <th>№</th>
+                    <th>Хост</th>
+                    <th>Название</th>
+                    <th>Кол-во игроков</th>
+                    <th>Действие<th>
+                </tr>
+                {% for game in games %}
+                    <tr class="alt">
+                        <td>{{ game.id }}</td>
+                        <td>{{ game.pname }}</td>
+                        <td>{{ game.pcount }}</td>
+                        <td>{{ game.gname }}</td>
+                        <td>{{ game.pname }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% else %}
+        Список игр пуст!<br>Обновите список или создайте новую игру.
+    {% endif %}
+    <hr>
+    <button name="" type="button" class="submit" onclick="document.location='{{ path('noodle_newGame') }}'">Создать</button>
+    <button name="" type="button" class="submit" onclick="document.location='{{ path('noodle_gamesPage') }}'">Обновить</button>
 {% endblock %}

@@ -1,0 +1,15 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% form_theme form 'form_table_layout.html.twig'  %}
+
+{% block css_styles %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/roskynoodle/css/niceButton.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+    Список игр{{ parent() }}
+{% endblock %}
+
+{% block fos_user_content %}
+    {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{% endblock fos_user_content %}

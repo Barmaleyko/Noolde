@@ -14,6 +14,26 @@ class GamesList
      */
     private $id;
 
+    /**
+     * @var string
+     */
+    private $pname;
+
+    /**
+     * @var integer
+     */
+    private $pcount;
+
+    /**
+     * @var string
+     */
+    private $gname;
+
+    /**
+     * @var string
+     */
+    private $gstatus;
+
 
     /**
      * Get id
@@ -24,60 +44,96 @@ class GamesList
     {
         return $this->id;
     }
-    /**
-     * @var string
-     */
-    private $name;
 
     /**
-     * @var integer
-     */
-    private $players;
-
-
-    /**
-     * Set name
+     * Set pname
      *
-     * @param string $name
+     * @param string $pname
      * @return GamesList
      */
-    public function setName($name)
+    public function setPname($pname)
     {
-        $this->name = $name;
+        $this->pname = $pname;
     
         return $this;
     }
 
     /**
-     * Get name
+     * Get pname
      *
      * @return string 
      */
-    public function getName()
+    public function getPname()
     {
-        return $this->name;
+        return $this->pname;
     }
 
     /**
-     * Set players
+     * Set pcount
      *
-     * @param integer $players
+     * @param integer $pcount
      * @return GamesList
      */
-    public function setPlayers($players)
+    public function setPcount($pcount)
     {
-        $this->players = $players;
+        $this->pcount = $pcount;
     
         return $this;
     }
 
     /**
-     * Get players
+     * Get pcount
      *
      * @return integer 
      */
-    public function getPlayers()
+    public function getPcount()
     {
-        return $this->players;
+        return $this->pcount;
+    }
+
+    /**
+     * Set gname
+     *
+     * @param string $gname
+     * @return GamesList
+     */
+    public function setGname($gname)
+    {
+        $this->gname = $gname;
+    
+        return $this;
+    }
+
+    /**
+     * Get gname
+     *
+     * @return string 
+     */
+    public function getGname()
+    {
+        return $this->gname;
+    }
+
+    /**
+     * Set gstatus
+     *
+     * @param string $gstatus
+     * @return GamesList
+     */
+    public function setGstatus($gstatus)
+    {
+        $this->gstatus = $gstatus;
+    
+        return $this;
+    }
+
+    /**
+     * Get gstatus
+     *
+     * @return string 
+     */
+    public function getGstatus()
+    {
+        return $this->gstatus;
     }
 }
